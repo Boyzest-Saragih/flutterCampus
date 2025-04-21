@@ -1,10 +1,13 @@
+import 'package:fe_matkul/provider/todosModel.dart';
 import 'package:fe_matkul/screens/home.dart';
 import 'package:fe_matkul/screens/w03.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() async{
-
-  runApp(const MyApp());
+void main() async {
+  runApp(
+    ChangeNotifierProvider(create: (context) => Todosmodel(), child: MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
